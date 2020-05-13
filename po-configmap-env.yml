@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod-env-cm
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    env:
+    - name: username
+      valueFrom:
+        configMapKeyRef:
+          name: my-cm
+          key: my.username
+    - name: password
+      valueFrom:
+        configMapKeyRef:
+          name: my-cm
+          key: my.password
