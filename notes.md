@@ -23,3 +23,7 @@ also if you want to use a file inside the yaml , you can use name of the file un
       items:
         - key: manas.cnf
           path: mannas.cnf  ```
+
+
+"Decoding base64"
+echo 'MWYyZDFlMmU2N2Rm' | base64 --decode
